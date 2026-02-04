@@ -398,6 +398,17 @@ btn.addEventListener("click", () => {
     }
     isPlaying = !isPlaying;
 });
+    $('.nav-toggle').on('click', function (e) {
+        e.preventDefault();
+
+        // anima el botón
+        $(this).toggleClass('active');
+
+        // muestra/oculta el menú
+        $('.header-nav').toggleClass('open');
+    });
+
+});
 </script>
 
 
