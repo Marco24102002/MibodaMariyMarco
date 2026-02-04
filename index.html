@@ -44,6 +44,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 
 
 <body id="top">
+ <div id="audio-hint">
+  👆 Toca la pantalla y sube el volumen 🔊
+</div>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -167,7 +170,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 <section class="rsvp text-center" id="rsvp">
    
 
-                             <iframe src="https://script.google.com/macros/s/AKfycbzhgjQ2_iSd2Fy_MoX62nIN4r2lTnc-Rf4-fHeNWCfbAH1tcrg2xGFcfXaGV-YB83cyWw/exec"width="100%" height="600" style=" solid #ccc;">
+                             <iframe src="https://script.google.com/macros/s/AKfycbysrAfBUlwKsZ9M7BC8CAiK1YKoiMeXtPTdqeoQfPoyebaB15ieQjwQUspulkzddVFuqw/exec "width="100%" height="600" style=" solid #ccc;">
                              </iframe>
   
 </section>
@@ -408,7 +411,12 @@ btn.addEventListener("click", () => {
         $('.header-nav').toggleClass('open');
     });
 
-
+document.addEventListener("click", function () {
+  const hint = document.getElementById("audio-hint");
+  if (hint) {
+    hint.style.display = "none";
+  }
+});
 </script>
 
 
